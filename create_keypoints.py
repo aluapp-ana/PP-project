@@ -108,7 +108,7 @@ def processar_pasta_de_quadros(frames_dir, output_root="keypoints_dataset",
                                           mp_drawing.DrawingSpec((255,255,255),2,2),
                                           mp_drawing.DrawingSpec((255,255,255),2))
 
-        # Mini-mesh (só pontos)
+        
         if USE_MINI_MESH and res.face_landmarks:
             reduced = landmark_pb2.NormalizedLandmarkList(
                 landmark=[res.face_landmarks.landmark[i] for i in MINI_MESH_IDXS])
